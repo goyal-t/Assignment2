@@ -5,10 +5,7 @@ public class MandrakeRoot extends PotionDecorator{
     }
     
     public MandrakeRoot(Potion p){
-        psuper(p);
-    }
-    public void setPotion(Potion p){
-        potion = p;
+        super(p);
     }
     public String getDescription(){
         if(potion == null){
