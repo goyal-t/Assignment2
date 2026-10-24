@@ -5,11 +5,13 @@
 public class BertiesBeans extends Food{
     public BertiesBeans(){}
 
+    @Override 
     public String getDescription(){
         return "Bertie's Beans";
     }
 
-    public String getEnergy(){
+    @Override 
+    public int getEnergy(){
         return 2;
     }
 }

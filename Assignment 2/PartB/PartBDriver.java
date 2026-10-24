@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.JOptionPane;
+import javax.swing.JOptionPane;
 public class PartBDriver{
     public static void main(String[] args){
         Player player = new Player(1);
@@ -37,7 +37,7 @@ public class PartBDriver{
                     }
                 }else if(i instanceof PotionDecorator){
                     if(player.getPotion() == null && player.getSpecialPotion()==null){
-                        System.out.println("[No potion picked up available to use enhancers]");
+                        System.out.println("[No potions found. Acquire a potion to enable enhancers]");
                     }else if(player.getPotion() != null && player.getSpecialPotion()==null){
                         player.addEnhancement(player.getPotion(), (Potion)i);
                         printEnhancement(i);
@@ -49,7 +49,7 @@ public class PartBDriver{
                         System.out.println(player.getSpecialPotionDescription());
                     }else if(player.getPotion()!=null&&player.getSpecialPotion()!=null){
                         String[] buttons = {"draught","butterbeer"};
-                        int whichPotionEnhance = JOptionPane.showOptionDialog(null, "Select the potion to enhance: ",null,JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, nuttons, buttons[1]);
+                        int whichPotionEnhance = JOptionPane.showOptionDialog(null, "Select the potion to enhance: ",null,JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, buttons, buttons[1]);
                         if(whichPotionEnhance == 0){
                             player.addEnhancement(player.getPotion(), (Potion)i);
                             printEnhancement(i);

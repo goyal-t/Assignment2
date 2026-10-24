@@ -5,7 +5,7 @@
 public abstract class Food implements Item{
     protected String description = "unknown food";
     protected int energy = 0;
-    
+    @Override 
     public String getDescription(){
         return description;
     }
