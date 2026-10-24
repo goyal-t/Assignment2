@@ -1,5 +1,4 @@
 public class MandrakeRoot extends PotionDecorator{
-    private Potion potion;
     
     public MandrakeRoot(){
         super();
