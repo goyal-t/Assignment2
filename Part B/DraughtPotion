@@ -1,0 +1,15 @@
+public class DraughtPotion implements Potion{
+    public DraughtPotion(){
+        
+    }
+    
+    public String getDescription(){
+        return "Base Draught";
+    }
+    public int getHealing(){
+        return 1;
+    }
+    public int getStability(){
+        return 1;
+    }
+}
